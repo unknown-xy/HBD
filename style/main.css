@@ -1,0 +1,424 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.song {
+  visibility: hidden;
+}
+
+.container {
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  visibility: hidden;
+  width: 100vw;
+}
+
+.container > div {
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 15vh;
+}
+
+.one {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.two {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  font-weight: 300;
+  color: #ffeb3b;
+  letter-spacing: 1px;
+}
+
+.three {
+  font-size: clamp(1.8rem, 6vw, 3rem);
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  font-weight: 600;
+}
+
+.five {
+  z-index: 2;
+}
+
+.four {
+  z-index: 1;
+}
+
+.four .text-box {
+  border: 3px solid #ff6bcb;
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 25px;
+  position: relative;
+  width: min(600px, 90vw);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 15px 35px rgba(233, 30, 99, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.text-box p {
+  margin: 0;
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.text-box span {
+  visibility: hidden;
+}
+
+.text-box .fake-btn {
+  background: linear-gradient(45deg, #e91e63, #9c27b0);
+  border-radius: 25px;
+  bottom: -45px;
+  color: #fff;
+  padding: 15px 30px;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  font-weight: 600;
+  box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.five p {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  left: 0;
+  position: absolute;
+  right: 0;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  font-weight: 500;
+}
+
+.idea-3 strong {
+  border-radius: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ffeb3b;
+  color: #333;
+  box-shadow: 0 4px 15px rgba(255, 235, 59, 0.4);
+  font-weight: 700;
+}
+
+.five .idea-5 {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+}
+
+.idea-5 span, .idea-6 span, .wish-hbd span {
+  display: inline-block;
+}
+
+.idea-6 span {
+  font-size: clamp(4rem, 15vw, 8rem);
+  color: #ffeb3b;
+  text-shadow: 3px 3px 0 #e91e63, 6px 6px 0 rgba(0,0,0,0.2);
+  margin: 0 8px;
+  transform: rotate(-5deg);
+  font-weight: 800;
+}
+
+.special-font {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  color: #ffeb3b;
+  font-size: clamp(3rem, 10vw, 5rem) !important;
+  text-shadow: 3px 3px 0 #e91e63;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.special-font-2 {
+  font-family: 'Great Vibes', cursive;
+  color: #ffeb3b;
+  font-size: clamp(2.8rem, 9vw, 4.5rem) !important;
+  text-shadow: 2px 2px 0 #e91e63;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.festive-text {
+  font-family: 'Georgia', serif;
+  font-size: clamp(1.3rem, 4vw, 1.8rem) !important;
+  line-height: 1.6;
+  color: #e91e63;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.birthday-title {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
+}
+
+.six {
+  position: relative;
+  top: 8vh;
+  z-index: 1;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.six img.profile-picture {
+  display: inline-block;
+  height: min(400px, 45vh);
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  border: 5px solid #fff;
+}
+
+.six .hat {
+  position: absolute;
+  top: 50%;
+  right: -60px;
+  transform: translateY(-50%) rotate(15deg);
+  width: min(140px, 35vw);
+  height: auto;
+  filter: drop-shadow(5px 5px 8px rgba(0, 0, 0, 0.4));
+  z-index: 10;
+}
+
+.baloons img {
+  display: inline-block;
+  position: absolute;
+  width: min(100px, 18vw);
+  animation: float 6s ease-in-out infinite;
+}
+
+.baloons img:nth-child(even) {
+  left: -8%;
+  animation-delay: 0.3s;
+}
+
+.baloons img:nth-child(odd) {
+  right: -8%;
+  animation-delay: 0.7s;
+}
+
+.baloons img:nth-child(3n + 0) {
+  left: 25%;
+  animation-delay: 1.2s;
+}
+
+.baloons img:nth-child(4n + 0) {
+  right: 25%;
+  animation-delay: 1.8s;
+}
+
+.baloons img:nth-child(5n + 0) {
+  left: 10%;
+  animation-delay: 2.4s;
+}
+
+.baloons img:nth-child(6n + 0) {
+  right: 10%;
+  animation-delay: 3s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-25px) rotate(3deg); }
+  66% { transform: translateY(-15px) rotate(-3deg); }
+}
+
+.seven, .eight {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+.eight svg {
+  left: 0;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  width: min(35px, 10vw);
+  z-index: -1;
+  animation: sparkle 3s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.eight svg:nth-child(1) { fill: #ff6bcb; left: 3vw; top: 5vh; }
+.eight svg:nth-child(2) { fill: #ffeb3b; left: 85vw; top: 15vh; }
+.eight svg:nth-child(3) { fill: #4fc3f7; left: 15vw; top: 25vh; }
+.eight svg:nth-child(4) { fill: #76ff03; left: 75vw; top: 35vh; }
+.eight svg:nth-child(5) { fill: #e91e63; left: 8vw; top: 65vh; }
+.eight svg:nth-child(6) { fill: #9c27b0; left: 82vw; top: 45vh; }
+.eight svg:nth-child(7) { fill: #ff9800; left: 88vw; top: 70vh; }
+.eight svg:nth-child(8) { fill: #00bcd4; left: 12vw; top: 80vh; }
+.eight svg:nth-child(9) { fill: #8bc34a; left: 90vw; top: 90vh; }
+
+.wish-hbd {
+  font-size: clamp(2em, 8vw, 4em);
+  margin: 20px 0 0;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, #ffeb3b, #e91e63, #9c27b0, #2196f3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.wish h5 {
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  font-weight: 300;
+  margin: 15px 0 0;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  line-height: 1.5;
+}
+
+.nine p {
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.closing-message {
+  font-family: 'Georgia', serif;
+  font-size: clamp(1.5rem, 5vw, 2.2rem) !important;
+  color: #ffeb3b;
+  text-shadow: 2px 2px 0 #e91e63;
+  font-weight: 600;
+  font-style: italic;
+}
+
+#replay {
+  cursor: pointer;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  color: #333;
+  font-weight: 500;
+}
+
+.last-smile {
+  font-size: 4rem !important;
+  animation: heartbeat 1.5s ease-in-out infinite;
+  margin: 10px 0 !important;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+@media screen and (max-width: 768px) {
+  .container > div {
+    top: 12vh;
+  }
+  
+  .six {
+    top: 6vh;
+  }
+  
+  .six .hat {
+    right: -40px;
+    width: min(100px, 28vw);
+  }
+  
+  .six img.profile-picture {
+    height: min(300px, 40vh);
+  }
+  
+  .baloons img {
+    width: min(80px, 16vw);
+  }
+  
+  .four .text-box {
+    padding: 20px;
+  }
+  
+  .text-box .fake-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container > div {
+    top: 10vh;
+  }
+  
+  .six .hat {
+    right: -25px;
+    width: min(80px, 22vw);
+  }
+  
+  .six img.profile-picture {
+    height: min(250px, 35vh);
+  }
+  
+  .baloons img {
+    width: min(60px, 14vw);
+  }
+  
+  .text-box .fake-btn {
+    bottom: -40px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .idea-6 span {
+    font-size: clamp(3rem, 12vw, 6rem);
+    margin: 0 4px;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .container > div {
+    top: 12vh;
+  }
+  
+  .six {
+    top: 4vh;
+  }
+  
+  .six img.profile-picture {
+    height: 30vh;
+  }
+  
+  .six .hat {
+    right: -30px;
+    width: min(90px, 25vw);
+  }
+}
